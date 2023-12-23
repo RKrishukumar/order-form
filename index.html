@@ -46,7 +46,7 @@
     
     <form>
       <div content="width=device-width, initial-scale=1"; id="head">
-        <h2 style="text-align: center;">Fill detalis to place order</h2>
+        <h2 style="text-align: center;">Fill details to place order</h2>
       </div>
       <div id="row">
       <div>
@@ -81,7 +81,7 @@
       </br>
       <div class="order">
         <div>
-          <label for="">Enter your Name</label>
+          <label for=""><i style="color: red;">*</i>Enter your Name</label>
           <div class="block">
             <input style="height: 30px; width: 254px;" type="text" id="name" placeholder="Enter Your Name">
           </div>
@@ -89,7 +89,7 @@
       </div>
       <div class="order">
         <div>
-          <label for="">Address</label>
+          <label for=""><i style="color: red">*</i>Address</label>
           <div class="block">
             <input id="address" placeholder="Exact address to deliver order" style="height: 30px; width: 254px;" type="text">
           </div>
@@ -97,7 +97,7 @@
       </div>
       <div class="order">
         <div>
-          <label for="">Mobile Number</label>
+          <label for=""><i style="color: red;">*</i>Mobile Number</label>
           <div class="block">
             <input placeholder="Enter Mobile Number" id="phone" style="height:30px; width: 254px;"  type="number">
           </div>
@@ -126,7 +126,7 @@
       </div>
       <div class="order">
         <div>
-          <label for="">Course</label>
+          <label for="">Course....<b>😉</b></label>
           <div class="block">
             <input id="course" placeholder="Enter Your Course if Student " style="height: 30px; width: 254px;" type="text">
             
@@ -136,7 +136,7 @@
       </div>
       <div class="order">
         <div>
-          <label for="">Mode Of Payment</label>
+          <label for=""><i style="color: red;">*</i>Mode Of Payment</label>
           <div class="block">
             <select style="height: 35px; width: 260px;" id="payment">
               <option value="Select">Select</option>
@@ -166,26 +166,28 @@
          var College=document.getElementById("college").value;
          var Course=document.getElementById("course").value;
          var Payment=document.getElementById("payment").value;
-         var url="https://wa.me/+918112307505?text="
+         var url="https://wa.me/+919026019016?text="
          +Prof+"%0a"
-         +"Name : "+Name+"%0a"
-         +"Phone number : "+Phone+"%0a"
-         +"Area : "+Area+"%0a"
-         +"Address : "+Address+"%0a"
-         +"College : "+College+"%0a"
-         +"Course : "+Course+"%0a"
-         +"Mode of Payment : "+Payment;
+         +"*Name :* "+Name+"%0a"
+         +"*Phone number :* "+Phone+"%0a"
+         +"*Area :* "+Area+"%0a"
+         +"*Address :* "+Address+"%0a"
+         +"*College :* "+College+"%0a"
+         +"*Course :* "+Course+"%0a"
+         +"*Mode of Payment :* "+Payment+"%0a";
          if(Name=="")
-           alert("Enter Name to proceed furthur");
+         alert("Enter Name to proceed furthur");
          else if(Address=="")
-           alert("Please fill address for delivery");
+         alert("Please Enter your Address");
          else if(Phone=="")
-           alert("Please enter phone number");
+         alert("Enter mobile number");
          else if(Payment=="Select")
-           alert("Please select mode of payment");
+         alert("Please select mode of payment");
          
-         window.open(url,'_blank').focus();
          
+         else if((Payment!="Select")&&(Name!="")&&(Phone!="")&&(Address!=""))
+        window.open(url,'_blank').focus();
+        
          
          
        }

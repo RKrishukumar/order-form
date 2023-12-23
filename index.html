@@ -46,7 +46,7 @@
     
     <form>
       <div content="width=device-width, initial-scale=1"; id="head">
-        <h2 style="text-align: center;">Fill detais to place order</h2>
+        <h2 style="text-align: center;">Fill detalis to place order</h2>
       </div>
       <div id="row">
       <div>
@@ -174,7 +174,16 @@
          +"Address : "+Address+"%0a"
          +"College : "+College+"%0a"
          +"Course : "+Course+"%0a"
-         "Mode of Payment : "+Payment;
+         +"Mode of Payment : "+Payment;
+         if(Name=="")
+           alert("Enter Name to proceed furthur");
+         else if(Address=="")
+           alert("Please fill address for delivery");
+         else if(Phone=="")
+           alert("Please enter phone number");
+         else if(Payment=="Select")
+           alert("Please select mode of payment");
+         
          window.open(url,'_blank').focus();
          
          
